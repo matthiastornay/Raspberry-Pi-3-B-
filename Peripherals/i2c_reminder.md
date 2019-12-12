@@ -16,7 +16,7 @@ ___Switch to the one shot mode :___
 
 ___Read the configuration byte of the temperature sensor :___
 
-	i2cget -y 1 0x48 0xACh 	-> R/W = 1
+	i2cget -y 1 0x48 0xACh # -> R/W = 1
 
 ___Start an acquisition (no acquisition end flag) :___
 
@@ -25,6 +25,8 @@ ___Start an acquisition (no acquisition end flag) :___
 ___Read the result of the acquisition (in hexadecimal !) :___
 
 	i2cget -y 1 0x48 0xAAh
+	
+___Final configuration :___
 
     #define DS1621_I2C_BUS			1
     #define DS1621_SLAVE_ADDR		0x48
